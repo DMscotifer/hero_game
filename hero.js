@@ -19,11 +19,11 @@ var Hero = function(name, health, favouriteFood) {
   this.health = health;
   this.favouriteFood = favouriteFood;
   this.quests = new Array();
-}
+};
 
 Hero.prototype.talk = function() {
   return "I am the incredible " + this.name;
-}
+};
 
 Hero.prototype.eat = function(food) {
   if (this.favouriteFood === food.name){
@@ -31,6 +31,12 @@ Hero.prototype.eat = function(food) {
     } else {
     this.health += food.replenishmentValue;
   }
-}
+};
+
+Hero.prototype.questByReward = function() {
+  this.quests.sort(function(quest, questToCompare){
+    return quest.reward - questToCompare.reward;
+  })
+};
 
 module.exports = Hero;
