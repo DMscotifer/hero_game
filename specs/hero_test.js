@@ -11,10 +11,12 @@ describe('Hero', function() {
 
 beforeEach(function() {
   quest1 = new Quest("kill all the rats in the sewers", 1, 1, 100);
+  quest2 = new Quest("kill all the goblins in the sewers", 2, 2 , 200);
   food1 = new Food("bacon", 10);
   food2 = new Food("pork chops", 10);
   hero1 = new Hero("Spawn", 100, "bacon");
   hero1.quests.push(quest1);
+  hero1.quests.push(quest2);
 
 })
 
@@ -32,8 +34,11 @@ it("should heal x1.5 if favourite food", function() {
   assert.strictEqual(hero1.health, 115);
 });
 
-it("should have quests, function", function() {
+it("should have quests", function() {
   assert.strictEqual(hero1.quests[0], quest1);
+  assert.strictEqual(hero1.quests[1], quest2);
 })
+
+it
 
 });
