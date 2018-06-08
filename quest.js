@@ -6,7 +6,8 @@
 //     A task should be able to be marked as completed
 //
 
-var Quest = function(difficulty, urgency, reward){
+var Quest = function(description, difficulty, urgency, reward){
+  this.description = description;
   this.difficulty = difficulty;
   this.urgency = urgency;
   this.reward = reward;
